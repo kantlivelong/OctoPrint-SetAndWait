@@ -80,7 +80,7 @@ class SetAndWait(octoprint.plugin.EventHandlerPlugin):
             elif heater_type == 'bed':
                 actual = heaters['bed']['actual']
 
-            self._logger.debug("Heater: {}, Mode, {}, Target: {}, Actual {}".format(heater_identifier, mode, target, actual))
+            self._logger.debug("Heater: {}, Mode: {}, Target: {}, Actual: {}".format(heater_identifier, mode, target, actual))
 
             if mode == 'S':
                 if actual >= target:
