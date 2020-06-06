@@ -89,6 +89,7 @@ class SetAndWait(octoprint.plugin.EventHandlerPlugin):
                 self._logger.warning("Accurate temperature not yet implemented. line={}".format(line))
                 break
 
+            self._printer._comm._clear_to_send.wait()
             self._poll_temperature_bypass_queue()
             time.sleep(1)
 
